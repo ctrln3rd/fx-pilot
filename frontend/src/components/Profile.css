@@ -13,6 +13,10 @@
     font-weight: lighter;
     color: #06a3e0;
 }
+.profileCont .profileverify{
+    font-size: 0.4em;
+    text-align: center;
+}
 .profileCont .accountManage{
     display: flex;
     flex-direction: column;
@@ -25,11 +29,12 @@
     width: 40vw;
     margin: 2vh 0;
     font-size: 0.36em;
-    background-color: #06a3e0;
+    background-color: #10d2ec;
     padding: 2vh 0;
     border: none;
     cursor: pointer;
     font-weight: bold;
+    color: inherit;
 }
 .accountManage #accountLink:hover{
     color: #e00635;
@@ -55,7 +60,7 @@
 }
 .exchangeCont #controlCharts{
     padding: 2vh 3vw;
-    border: #06a3e0 2px solid;
+    border: #10d2ec 2px solid;
     border-radius: 10px;
     cursor: pointer;
     background-color: transparent;
@@ -100,42 +105,10 @@
 .depositCont h2{
     font-size: 0.6em;
 }
-.depositCont .depositMethods{
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-}
-.depositMethods img{
-    width: 80px;
-}
-.depositCont li{
+.depositCont p{
+    color: #06a3e0;
     font-size: 0.4em;
-    margin: 1vh 5vw;
 }
-.depositCont li p span{
-    font-weight: bold;
-}
-.depositCont .depositForm{
-    display: flex;
-    flex-direction: column;
-}
-.depositForm label{
-    font-size: 0.4em;
-    margin: 1vh 0;
-}
-.depositForm input,select,textarea{
-    font-size: 0.4em;
-    width: 40vw;
-    margin: 1.5vh 0;
-    padding: 1vh 1vw;
-}
-.depositForm input[type="submit"]{
-    background-color: #06a3e0;
-    border: none;
-    cursor: pointer;
-    padding: 2vh 5vw;
-}
-
 /*withdraw container*/
 .withdrawCont{
     font-size: calc(15px + ((4vh + 2vw) / 2));
@@ -150,25 +123,9 @@
 .withdrawCont h2{
     font-size: 0.6em;
 }
-.withdrawCont .withdrawForm{
-    display: flex;
-    flex-direction: column;
-}
-.withdrawForm label{
+.withdrawCont p{
     font-size: 0.4em;
-    margin: 1vh 0;
-}
-.withdrawForm input,select,textarea{
-    font-size: 0.4em;
-    width: 40vw;
-    padding: 1vh 1vw;
-    margin: 1.5vh 0;
-}
-.withdrawForm input[type="submit"]{
-    background-color: #06a3e0;
-    border: none;
-    cursor: pointer;
-    padding: 2vh 5vw;
+    color: #06a3e0;
 }
 
 /*Transactions cont*/
@@ -252,44 +209,5 @@
 }
 
 @media screen  and (max-width: 768px) {
-    /*deposit account*/
-    .depositCont .depositMethods{
-        flex-direction: column;
-    }
-    .depositMethods img{
-        width: 50px;
-    }
-    .depositMethods li{
-        font-size: 0.5em;
-    }
-    .depositMethods li h4{
-        margin: 0;
-        padding: 0;
-    }
-    .depositForm label{
-        font-size: 0.475em;
-    }
-    .depositForm input,select,textarea{
-        width: 70vw;
-        font-size: 0.48em;
-    }
-    .withdrawForm label{
-        font-size: 0.47em;
-    }
-    .withdrawForm input,select,textarea{
-        font-size: 0.48em;
-        width: 70vw;
-    }
-    .accountManage #accountLink{
-        font-size: 0.45em;
-        width: 65vw;
-    }
-    .mySuccessList li{
-        font-size: 0.42em;
-        padding: 1vh 1vw;
-    }
-    .myPendingList li{
-        font-size: 0.42em;
-        padding: 1vh 1vw;
-    }
+
 }

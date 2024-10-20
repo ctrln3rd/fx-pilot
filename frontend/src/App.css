@@ -1,3 +1,25 @@
+.notverified{
+  position: fixed;
+  right: 10vw;
+  bottom: 15vh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+  padding: 1vh 3vw;
+  z-index: 30;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.notverified button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #06a3e0;
+}
+
 .resCont{
   z-index: 6;
   font-size: calc(15px + ((4vh + 2vw) / 2));

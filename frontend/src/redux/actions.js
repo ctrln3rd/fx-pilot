@@ -1,7 +1,11 @@
 /*popup actions*/
-export const setCurrentUser = (currentuser) =>({
-  type: 'CURRENT_USER',
-  payload:currentuser
+export const setCurrentUser = (currentuseremail) =>({
+  type: 'CURRENT_USER_EMAIL',
+  payload:currentuseremail
+});
+export const setCurrentUserVerified = (currentuserverified) =>({
+  type: 'CURRENT_USER_VERIFIED',
+  payload:currentuserverified
 });
 
 export const setCurrentUserData = (currentuserdata) =>({
@@ -14,8 +18,5 @@ export const setResponse = (response) =>({
   payload: response
 });
 
-export const setResponseStatus = (responsestatus) =>({
-  type: 'RESPONSE_STATUS',
-  payload: responsestatus
-});
+
   

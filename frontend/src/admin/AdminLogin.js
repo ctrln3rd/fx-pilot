@@ -3,7 +3,7 @@ import './AdminLogin.css'
 import { login } from "../firebase/firebase";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { setResponse, setResponseStatus } from "../redux/actions";
+import { setResponse } from "../redux/actions";
 
 export default function AdminLogin (){
     const dispatch = useDispatch();
@@ -20,18 +20,17 @@ export default function AdminLogin (){
     const handleSubmit = async(e)=>{
         e.preventDefault()
         try{
-            dispatch(setResponse(true))
-            dispatch(setResponseStatus("trying to log in"))
+            dispatch(setResponse("trying to log in"))
             const response = await login(formData.email, formData.password);
             if(response){
-                dispatch(setResponseStatus("login successful"))
+                dispatch(setResponse("login successful"))
                 setTimeout(()=>{
                     navigate("/admin/dashboard")
                 },2000)
             }
         }catch(err){
             console.log("An error has occurred:",err)
-            dispatch(setResponseStatus("login error"))
+            dispatch(setResponse("login error"))
 
         }finally{
             setTimeout(()=>{

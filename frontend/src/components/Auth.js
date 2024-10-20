@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './Auth.css'
 import { useDispatch } from "react-redux";
-import { setResponse, setResponseStatus } from "../redux/actions";
+import { setResponse } from "../redux/actions";
 import { login, signup } from "../firebase/firebase";
 import { useNavigate, Link } from "react-router-dom";
 import { resetPassword } from "../firebase/userFirebase";
@@ -10,8 +10,6 @@ import { resetPassword } from "../firebase/userFirebase";
 function Login(){
     const dispatch = useDispatch();
     const navigate = useNavigate()
-    const [reStatus, setReStatus] = useState(false)
-    const [isError, setError] = useState(false)
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [resetEmail, setResetEmail] = useState('');
@@ -25,17 +23,16 @@ function Login(){
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-        dispatch(setResponse(true))
-        dispatch(setResponseStatus("trying tolog you in"))
+        dispatch(setResponse("trying tolog you in"))
         await login(email, password);
         // Login successfull
-        dispatch(setResponseStatus("login successfull"))
+        dispatch(setResponse("login successfull"))
         setTimeout(()=>{
             navigate("/profile")
         },2000)
         } catch (error) {
         // Handle login error
-        dispatch(setResponseStatus("error check inputs/internet"))
+        dispatch(setResponse("error check inputs/internet"))
         console.error('Error logging in:', error.message);
         }finally{
             setTimeout(() => {
@@ -48,13 +45,12 @@ function Login(){
         e.preventDefault();
         try{
             setResetForm(false)
-            dispatch(setResponse(true))
-            dispatch(setResponseStatus("sending request"))
+            dispatch(setResponse("sending request"))
             await resetPassword(resetEmail);
-            dispatch(setResponseStatus("success check your email to reset"))
+            dispatch(setResponse("success check your email to reset"))
         }catch (error) {
             // Handle login error
-            dispatch(setResponseStatus("A error has occurred"))
+            dispatch(setResponse("A error has occurred"))
             console.error('Error sending reuest:', error);
         }finally{
             setTimeout(() => {
@@ -70,8 +66,6 @@ function Login(){
            {!isResetForm && <form className="loginForm" onSubmit={handleSubmit}>
                 <input type="email" name="email" placeholder="email" value={email} onChange={handleEmailChange} required/>
                 <input type="password" name="password" placeholder="password" value={password} onChange={handlePasswordChange} required/>
-                {isError && <p id="loginError">{isError}</p>}
-                {reStatus && <p id="loginStatus">{reStatus}</p>}
                 <p onClick={()=> setResetForm(true)}>forgot password</p>
                 <input type="submit" value="login"/>
             </form>}
@@ -89,7 +83,6 @@ function Login(){
 function Signup(){
     const dispatch = useDispatch();
     const [isconfirm, setconfirm] = useState(false);
-    const [isError, setError] = useState(false)
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [name, setName] = useState('');
@@ -105,20 +98,19 @@ function Signup(){
     const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-        dispatch(setResponse(true))
     if(password === confirmpassword){
-        dispatch(setResponseStatus("creating account"))
+        dispatch(setResponse("creating account"))
      const response = await signup(email, password, name, phone);
     if(response){
         setconfirm(true)
     }
-    dispatch(setResponseStatus("account created"))
+    dispatch(setResponse("account created"))
     }else{
-        dispatch(setResponseStatus("passwords doesn't match"))
+        dispatch(setResponse("passwords doesn't match"))
     }
     } catch (error) {
     // Handle signup error
-    dispatch(setResponseStatus("an error maybe the email already exist"))
+    dispatch(setResponse("an error maybe the email already exist"))
     console.error('Error signing up:', error.message);
     }
     finally{
@@ -139,7 +131,6 @@ function Signup(){
                 <input type="email" name="email" placeholder=" Email eg. example@example.com" onChange={handleEmailChange} value={email} required/>
                 <input type="password" name="password" placeholder="password" value={password} onChange={handlePasswordChange} required/>
                 <input type="password" name="confirmpassword" placeholder="confirm password" value={confirmpassword} onChange={handleConfirmPasswordChange} required/>
-                {isError && <p id="signupError">{isError}</p>}
                 <input type="submit" value="register"/>
             </form>}
 

@@ -10,7 +10,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    border-bottom: #5c5c5c 1px dotted;
+    /*border-bottom: #5c5c5c 1px dotted;*/
     width: 100%;
     background-color: #f1f1f1;
 }
@@ -20,9 +20,10 @@
 }
 #appTitle *{
     text-decoration: none;
+    color: #3d3d3d;
 }
 #appTitle sub{
-    color: #04acb8;
+    color: #10d2ec;
 }
 .myHeader .authLinks{
     display: flex;
@@ -100,74 +101,38 @@
 }
 
 /*bottom cont*/
-.bottomCont{
+.footerCont{
     z-index: 3;
     margin: 0;
-    padding: 0;
+    padding: 3vh 0;
+    padding-top: 10vh;
+    width: 100%;
     margin-top: 10vh;
     position: relative;
     bottom: 0;
     font-size: calc(15px + ((4vh + 2vw) / 2));
     background-color: #2b2b2b;
-    border-top: #f1f1f1 1px dotted;
-}
-.bottomCont .bottomPayments{
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-.bottomPayments img{
-    width: 80px;
-    margin: 1vh 5vw;
-}
-.bottomCont .myFooter{
-    border-top: #f1f1f1 1px dotted;
-    margin: 0 5vw;
-}
-.myFooter .footerLinks{
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-.footerLinks li{
     display: flex;
     flex-direction: column;
-    font-size: 0.4em;
-    color: #f1f1f1;
-    font-weight: bold;
-    margin: 1vh 5vw;
+    justify-content: center;
+    align-items: center;
+    gap: 3vh;
 }
-.footerLinks #footerLink{
-    text-decoration: none;
-    color: #e6e6e6;
-    font-weight: lighter;
-   font-size: 0.9em;
-   background-color: transparent;
-   border: none;
-   margin: 2vh 0;
-   cursor: pointer;
+.footerCont #scrolltop{
+    background-color: #10d2ec;
+    border: none;
+    cursor: pointer;
+    padding: 1vh 5vw;
+    font-size: 0.38em;
 }
-#footerLink:hover{
-    color: #04acb8;
-}
-
-.myFooter #footerPolicy{
+.footerCont #footerPolicy{
     font-size: 0.34em;
-    margin: 2vh 5vw;
+    margin: 0;
+    padding: 0 10vw;
     line-height: 1.7;
     color: #e6e6e6;
 }
-.myFooter .bottomMost{
-    border-top: #f1f1f1 1px dotted;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-.bottomMost .policyLinks{
+.footerCont .policyLinks{
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -178,10 +143,10 @@
     font-size: 0.34em;
     margin: 1vh 0.5em;
 }
-.bottomMost #copywrite{
+.footerCont #copywrite{
     font-size: 0.34em;
     margin: 1vh 10vw;
-    color: #e6e6e6;
+    color: #06a3e0;
 }
 
 @media screen and (max-width: 768px) {

@@ -1,21 +1,19 @@
 import React from "react";
 import './Invest.css'
-import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 export default function Invest(){
-    const dispatch = useDispatch();
-
+    const user = useSelector(state=> state.currentuser.email);
     return(
     <div className="investCont">
     <h2>Invest with us</h2>
-    <p id="investText">Earn huge profits for as low as <span>300 usd</span>. <br/> Deposit <span>300+usd</span> and enjoy huge profits you can track anytime of the day</p>
-    <div className="investAuth">
-        <button > Already a member? <span>login</span></button>
-        <button >Not a member? <span>open a live account</span></button>
-    </div>
+    <p id="investText">Start your simulated trading today with any amount without using your debit/credit card</p>
+    {!user && <div className="investAuth">
+        <Link to='/login' className="investauth">Already a member? <span>login</span> </Link>
+        <Link to='/signup' className="investauth">Not amember a member? <span>signup</span></Link>
+    </div>}
+    <Link to='/profile/deposit' className="investdeposit"> deposit to my account </Link>
     </div>
     )
-}
-
-function Methods(){
 }

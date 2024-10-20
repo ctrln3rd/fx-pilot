@@ -1,7 +1,7 @@
-import { Firestore, collection } from "firebase/firestore";
-import { db, auth, userColection } from "./firebase";
-import { sendEmailVerification, sendPasswordResetEmail } from "firebase/auth";
-import { doc, setDoc, getDoc, getDocs, query, where, orderBy, limit, deleteDoc, addDoc } from "firebase/firestore";
+import { collection } from "firebase/firestore";
+import { auth, userColection } from "./firebase";
+import { sendPasswordResetEmail } from "firebase/auth";
+import { doc, setDoc, getDoc, getDocs, query, where, orderBy, limit, deleteDoc} from "firebase/firestore";
 
 // get user data
 export const getCurrentUserData = async (em)=>{

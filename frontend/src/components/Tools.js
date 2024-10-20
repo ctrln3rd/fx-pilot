@@ -1,17 +1,18 @@
 import React, {useEffect, useState} from "react";
 import './Tools.css'
 import { Link } from "react-router-dom/dist";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 export  function Top(){
-    const currentuser = useSelector(state=>state.currentuser.value)
+    const currentuser = useSelector(state=>state.currentuser.email)
     const [isMobile, setMobile ] = useState(false)
     const [isDropdown, setDropdown] = useState(false)
     useEffect(()=>{
         const handleMobile = ()=>{
             setMobile(window.innerWidth < 768);
-        }
+        };
         window.addEventListener('resize',handleMobile);
+        handleMobile();
         return ()=>{
             window.removeEventListener('resize',handleMobile)
         }
@@ -27,7 +28,7 @@ export  function Top(){
     return(
         <div className="topCont">
             <header className="myHeader">
-                <h1 id="appTitle"><Link to="/" id="navbarLink">FX<sub>guard</sub></Link></h1>
+                <h1 id="appTitle"><Link to="/" id="navbarLink">FX<sub>pilot</sub></Link></h1>
                 {!currentuser && <div className="authLinks">
                     <Link id="authLink" to='/login'>login</Link>
                     <Link id="authLink" to='/signup'>open account</Link>
@@ -63,28 +64,19 @@ export  function Top(){
 
 export function Footer(){
     return(
-    <div className="bottomCont">
-        <footer className="myFooter">
-          <ul className="footerLinks">
-            <li>About us: <Link id="footerLink" to="/about">who we are</Link><Link id="footerLink" to="/about">our mission</Link>
-            <Link id="footerLink" to="/about">what sets us apart</Link></li>
-            <li>Accounts: <button id="footerLink" >login </button><button id="footerLink">open live account</button></li>
-            <li>Links: <Link id="footerLink" to="/contact">Contact</Link><Link id="footerLink" to="/education">learn</Link><Link id="footerLink" to="/invest">invest</Link></li>
-          </ul>
-           <p id="footerPolicy">At fx guard, we are committed to protecting your privacy and ensuring a secure and transparent trading experience. 
-           By using our platform, you agree to our Terms of Service, which govern your access to and use of CashNow FX's services. <br/>
-           Our Privacy Policy outlines how we collect, use, and safeguard your personal information, ensuring its confidentiality and compliance with relevant data protection laws.
-           <br/> Additionally, our Cookie Policy explains how we use cookies and similar tracking technologies to enhance your browsing experience and personalize content. 
-           By continuing to use fx guard, you consent to the terms outlined in our Terms of Service, Privacy Policy, and Cookie Policy.</p>
-           <div className="bottomMost">
-           <ul className="policyLinks">
-            <li><Link to="terms" id="policyLink">terms of service</Link></li>
-            <li><Link to="terms" id="policyLink">privacy policy</Link></li>
-            <li><Link to="terms" id="policyLink">cookie policy</Link></li>
-           </ul>
-           <p id="copywrite"> 2024©fxguard- created by austine mark</p>
+        <footer className="footerCont">
+            <button id="scrolltop">back to top</button>
+            <p id="footerPolicy">At fxpilot, we are committed to protecting your privacy and ensuring a secure and transparent trading experience. 
+                    By using our platform, you agree to our Terms of Service, which govern your access to and use of fxpilot's services. <br/>
+                    Our Privacy Policy outlines how we collect, use, and safeguard your personal information, ensuring its confidentiality and compliance with relevant data protection laws.
+                    <br/> Additionally, our Cookie Policy explains how we use cookies and similar tracking technologies to enhance your browsing experience and personalize content. 
+                    By continuing to use fxpilot, you consent to the terms outlined in our Terms of Service, Privacy Policy, and Cookie Policy.</p>
+           <div className="policyLinks">
+            <Link to="terms" id="policyLink">terms of service</Link>
+            <Link to="terms" id="policyLink">privacy policy</Link>
+            <Link to="terms" id="policyLink">cookie policy</Link>
            </div>
+           <p id="copywrite"> 2024©fxpilot- created by austine mark</p>
         </footer>
-    </div>
     )
 }

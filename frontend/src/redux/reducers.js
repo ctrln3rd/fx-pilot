@@ -1,13 +1,19 @@
    const currentUserInitial = {
-    value: false,
+    email: '',
+    verified: false
    }
    const currentUserReducer = (state = currentUserInitial, action) => {
    switch (action.type) {
-       case 'CURRENT_USER':
+       case 'CURRENT_USER_EMAIL':
        return {
            ...state,
-           value: action.payload,
+           email: action.payload,
        };
+       case 'CURRENT_USER_VERIFIED':
+        return {
+            ...state,
+           verified: action.payload,
+        };
        default:
        return state;
    }
@@ -39,20 +45,6 @@
            return state;
        }
        };
-       const responseStatusInitial = {
-        value: false,
-       }
-    const responseStatusReducer = (state = responseStatusInitial, action) => {
-       switch (action.type) {
-           case 'RESPONSE_STATUS':
-           return {
-               ...state,
-               value: action.payload,
-           };
-           default:
-           return state;
-       }
-       };
 
   
-  export {currentUserDataReducer,currentUserReducer, responseReducer, responseStatusReducer};
+  export {currentUserDataReducer,currentUserReducer, responseReducer};

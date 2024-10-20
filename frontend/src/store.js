@@ -4,7 +4,6 @@ import { currentUserReducer, currentUserDataReducer, responseReducer, responseSt
   
 const rootReducer = combineReducers({
     response: responseReducer,
-    responsestatus: responseStatusReducer,
     currentuser: currentUserReducer,
     currentuserdata: currentUserDataReducer
   });

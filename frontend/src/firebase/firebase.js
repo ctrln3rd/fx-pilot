@@ -1,7 +1,7 @@
 // firebase.js
 import { initializeApp } from "firebase/app";
 import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification} from "firebase/auth"
-import { getFirestore, collection, doc, setDoc, getDoc } from "firebase/firestore";
+import { getFirestore, collection, doc, setDoc } from "firebase/firestore";
 
 
 
@@ -36,7 +36,8 @@ export const signup = async (email, password, name, phone) => {
             Name: name,
             Email: email,
             Phone: phone,
-            Balance: 0,
+            Balance: 10000,
+            currency: 'usdt'
         });
         console.log("User data successfully saved!");
     } catch (error) {
@@ -51,11 +52,22 @@ export const signup = async (email, password, name, phone) => {
   };
   
 
+//send verification email
+
+export const sendVer = async ()=>{
+  try{
+     await sendEmailVerification(auth.currentUser)
+     return true
+  }catch(err){
+    console.error('An error occurred:', err)
+    throw err
+  }
+}
+
 // Sign in user
 export const login = async (email, password) => {
   try {
     const userCredential = await signInWithEmailAndPassword(auth, email, password);
-    const user = userCredential.user
     return true;
   } catch (error) {
     console.error('Error logging in:', error);

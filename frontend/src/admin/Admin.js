@@ -2,7 +2,7 @@ import React,{useEffect, useState} from "react";
 import './Admin.css'
 import { findUserWithEmail, findUserWithName, updateUser, getPendingUsers, acceptPending } from "../firebase/adminFirebase";
 import { useDispatch } from "react-redux";
-import { setResponse,setResponseStatus } from "../redux/actions";
+import { setResponse } from "../redux/actions";
 import { Link } from "react-router-dom";
 
 export function AdminDash(){
@@ -22,18 +22,17 @@ export function AdminDash(){
         e.preventDefault()
         try{
             setFoundName(false)
-            dispatch(setResponse(true))
-            dispatch(setResponseStatus("finding"))
+            dispatch(setResponse("finding"))
             const res = await findUserWithName(searchData1.toLocaleLowerCase())
             if(res.length > 0){
-                dispatch(setResponseStatus("Users found"))
+                dispatch(setResponse("Users found"))
                 setFoundName(res)
             }else{
-                dispatch(setResponseStatus("Users not found"))
+                dispatch(setResponse("Users not found"))
             }
         }catch(err){
             console.error("An error finding user:",err)
-            dispatch(setResponseStatus("Error fetching users"))
+            dispatch(setResponse("Error fetching users"))
         }finally{
             setTimeout(()=>{
                 dispatch(setResponse(false))
@@ -43,14 +42,13 @@ export function AdminDash(){
     const findUserEmail = async(e)=>{
         e.preventDefault()
         try{
-            dispatch(setResponse(true))
-            dispatch(setResponseStatus("looking"))
+            dispatch(setResponse("looking"))
             const res = await findUserWithEmail(searchData)
-            dispatch(setResponseStatus("User found"))
+            dispatch(setResponse("User found"))
             setFoundEmail(res)
         }catch(err){
             console.error("An error finding user:",err)
-            dispatch(setResponseStatus("Error finding user"))
+            dispatch(setResponse("Error finding user"))
         }finally{
             setTimeout(()=>{
                 dispatch(setResponse(false))
@@ -65,16 +63,15 @@ export function AdminDash(){
         e.preventDefault()
         try{
             setUpdateForm(false)
-            dispatch(setResponse(true))
-            dispatch(setResponseStatus("updating"))
+            dispatch(setResponse("updating"))
             const res = await updateUser(selectedUser, parseInt(updateData))
             if(res){
-                dispatch(setResponseStatus("user data updated"))
+                dispatch(setResponse("user data updated"))
                 setSelectedUser(false)
             }
         }catch(err){
             console.error("An error finding user:",err)
-            dispatch(setResponseStatus("Error updating user data"))
+            dispatch(setResponse("Error updating user data"))
         }finally{
             setTimeout(()=>{
                 dispatch(setResponse(false))
@@ -120,15 +117,14 @@ export function Pendings(){
     useEffect(()=>{
         const fetchpending = async()=>{
         try{
-            dispatch(setResponse(true))
-            dispatch(setResponseStatus("Fetching users"))
+            dispatch(setResponse("Fetching users"))
             const res = await getPendingUsers()
-            dispatch(setResponseStatus("Fetching users successfull"))
+            dispatch(setResponse("Fetching users successfull"))
             console.log(res)
             setUsers(res)
         }catch(err){
             console.log("An error fetching pending users:",err)
-            dispatch(setResponseStatus("Error Fetching users"))
+            dispatch(setResponse("Error Fetching users"))
         }
         finally{
             setTimeout(()=>{
@@ -153,15 +149,14 @@ export function Pendings(){
     }
     const accept = async(em, id, Type, Amount)=>{
         try{
-            dispatch(setResponse(true))
-            dispatch(setResponseStatus("updating"))
+            dispatch(setResponse("updating"))
             const res = await acceptPending(em, id,Type,Amount)
             if(res){
-                dispatch(setResponseStatus("accept successful"))
+                dispatch(setResponse("accept successful"))
             }
         }catch(err){
             console.error("An error updating users: ",err)
-            dispatch(setResponseStatus("An error occurred"))
+            dispatch(setResponse("An error occurred"))
         }finally{
             setTimeout(()=>{dispatch(setResponse(false))},2000)
         }
