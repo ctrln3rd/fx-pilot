@@ -1,0 +1,51 @@
+.contactCont{
+    font-size: calc(15px + ((4vh + 2vw) / 2));
+    margin: 0;
+    padding: 0;
+    padding-top: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contactCont h2{
+    font-size: 0.6em;
+}
+.contactCont p{
+    font-size: 0.4em;
+}
+.contactCont img{
+    width: 70vw;
+}
+.contactCont p span{
+    font-weight: bold;
+    color: #0971d3;
+}
+.contactCont .contactForm{
+    display: flex;
+    flex-direction: column;
+}
+.contactForm input{
+    font-size: 0.4em;
+    padding: 1vh 1vw;
+    margin: 3vh 0;
+}
+.contactForm input[type="submit"]{
+    background-color: #0971d3;
+    border: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .contactCont{
+        padding: 0 5vw;
+        padding-top: 20vh;
+    }
+    .contactCont p{
+        font-size: 0.45em;
+    }
+    .contactForm input,textarea{
+        font-size: 0.45em;
+        width: 70vw;
+    }
+}

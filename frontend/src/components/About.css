@@ -1,0 +1,67 @@
+.aboutCont{
+    margin: 0;
+    padding: 13vh 0;
+    font-size: calc(15px + ((4vh + 2vw) / 2));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.aboutCont h2{
+    margin: 5vh 0;
+    font-size: 0.6em;
+    text-align: center;
+
+}
+.aboutCont p{
+    font-size: 0.4em;
+    margin: 1vh 20vw;
+}
+.aboutCont h4{
+    font-size: 0.47em;
+}
+.aboutCont ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+.aboutCont ul li span{
+    font-weight: bold;
+}
+.aboutCont ul li{
+    width: 20vw;
+    font-size: 0.36em;
+    margin: 1vh 1vw;
+}
+.aboutCont ul img{
+    width: 19vw;
+}
+.aboutCont #aboutSignup{
+    background-color: #10d2ec;
+    font-size: 0.38em;
+    border: none;
+    padding: 1vh 4vw;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .aboutCont h2{
+        font-size: 0.8em;
+    }
+    .aboutCont p{
+        font-size: 0.45em;
+    }
+    .aboutCont h4{
+        font-size: 0.5em;
+    }
+    .aboutCont ul{
+        flex-direction: column;
+    }
+    .aboutCont ul li{
+        width: 70vw;
+        font-size: 0.45em;
+    }
+    .aboutCont ul img{
+        width: 69vw;
+    }
+}

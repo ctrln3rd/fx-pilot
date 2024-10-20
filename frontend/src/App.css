@@ -1,0 +1,25 @@
+.resCont{
+  z-index: 6;
+  font-size: calc(15px + ((4vh + 2vw) / 2));
+  margin: 0;
+  padding: 0.5vh 4vw;
+  position: fixed;
+  top: 12vh;
+  left: 30vw;
+  background-color: #fffce6;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.resCont p{
+  font-size: 0.4em;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .resCont{
+    top: 22vh;
+    left: 15vw;
+  }
+  .resCont p{
+    font-size: 0.43em;
+  }
+}

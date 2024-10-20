@@ -1,0 +1,35 @@
+.investCont{
+    margin: 0;
+    padding: 0;
+    padding-top: 15vh;
+    font-size: calc(15px + ((4vh + 2vw) / 2));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.investCont h2{
+    font-size: 0.55em;
+}
+.investCont #investText{
+    font-size: 0.4em;
+}
+#investText span{
+    color: #10b9ec;
+}
+.investCont .investAuth{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.investAuth button{
+    font-size: 0.37em;
+    background-color: transparent;
+    border: none;
+    margin: 1vh 4vw;
+}
+.investAuth button span{
+    background-color: #10d2ec;
+    padding: 1vh 3vw;
+    cursor: pointer;
+}

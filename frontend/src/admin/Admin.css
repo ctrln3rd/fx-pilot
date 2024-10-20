@@ -1,0 +1,96 @@
+.adminDashCont{
+    font-size: calc(15px + ((4vh + 2vw) / 2));
+    margin: 0;
+    padding: 0;
+    padding-top: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.adminDashCont h2{
+    font-size: 0.6em;
+}
+
+.adminDashCont form{
+    margin: 3vh 0;
+}
+.adminDashCont form input{
+    font-size: 0.4em;
+    margin: 0 1vw;
+    padding: 1vh 1vw;
+}
+.adminDashCont .updateBalance{
+    z-index: 3;
+    position: fixed;
+    top: 40vh;
+    left: 40vw;
+    background-color: #fffce6;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    padding: 2vh 2vw;
+}
+.updateBalance input{
+    font-size: 0.4em;
+    margin: 0 1vw;
+    padding: 1vh 1vw;
+}
+.adminDashCont .userNameList{
+    background-color: #fffce6;
+    list-style: none;
+    padding: 2vh 5vw;
+}
+.userNameList li{
+    font-size: 0.4em;
+}
+.userNameList button{
+    font-size: inherit;
+    padding: 1vh 2vw;
+}
+.adminDashCont .userEmail{
+    padding: 1vh 5vw;
+    background-color: #fffce6;
+}
+.userEmail p{
+    font-size: 0.4em;
+}
+.userEmail button{
+    font-size: 0.4em;
+    padding: 1vh 2vw;
+}
+.adminDashCont #adminPendingLink{
+    text-decoration: none;
+    font-size: 0.4em;
+    background-color: #06a3e0;
+    padding: 2vh 4vw;
+    color: #1f1f1f;
+    font-weight: bold;
+}
+
+/*pending users style */
+.pendingCont{
+    font-size: calc(15px + ((4vh + 2vw) / 2));
+    margin: 0;
+    padding: 0;
+    padding-top: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.pendingCont h2{
+    font-size: 0.6em;
+}
+.pendingCont .pendingList{
+    list-style: none;
+    background-color: #fffce6;
+    padding: 2vh 2vw;
+}
+.pendingList li{
+    font-size: 0.4em;
+    padding: 1vh 1vw;
+    border-bottom: #1f1f1f 1px dotted;
+}
+.pendingList button{
+    font-size: inherit;
+    padding: 1vh 2vw;
+}

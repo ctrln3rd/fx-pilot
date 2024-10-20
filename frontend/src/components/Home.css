@@ -1,0 +1,208 @@
+.homeCont{
+    margin: 0;
+    padding: 0;
+    font-size: calc(15px + ((4vh + 2vw) / 2));
+
+}
+.homeCont .homeDiv{
+    background-position: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 80vh;
+    margin: 0;
+    padding: 0;
+    padding-top: 10vh;
+    padding-left: 10vw;
+}
+.homeDiv h4{
+    font-size: 1.1em;
+    color: #eeeeee;
+}
+.homeDiv #homeDivLink{
+    text-decoration: none;
+    background-color: rgb(0, 0, 0, 0.7);
+    font-size: 0.5em;
+    color: #eeeeee;
+    font-weight: bold;
+    border: #02b7cf 2px solid;
+    padding: 1vh 4vw;
+    cursor: pointer;
+}
+
+.homeCont .homeAbout{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 5vw;
+    padding: 1vh 2vw;
+    margin: 7vh 10vw;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.homeAbout h3{
+    grid-column: 1;
+    font-size: 0.45em;
+    color: #03638f;
+}
+.homeAbout div{
+    grid-column: 1;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.homeAbout #homeAboutLink{
+    font-size: 0.37em;
+    text-decoration: none;
+    color: #03638f;
+    align-self: flex-start;
+}
+.homeAbout p{
+    font-size: 0.4em;
+    color: #4e4e4e;
+}
+.homeAbout img{
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    width: 30vw;
+    justify-self: center;
+    align-self: center;
+}
+/*getting started container*/
+.homeCont .gettingStarted{
+    margin: 10vh 0;
+    display: flex;
+    flex-direction: column;
+
+}
+.gettingStarted h3{
+    font-size: 0.55em;
+    margin-left: 10vw;
+}
+.gettingStarted ul{
+    list-style: none;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+}
+.gettingStarted ul li{
+    font-size: 0.37em;
+    width: 25vw;
+    margin: 1vh 2vw;
+}
+.gettingStarted ul li span{
+    font-weight: bold;
+}
+.gettingStarted ul img{
+    width: 24vw;
+}
+
+/*home laern cont*/
+.homeCont .homeLearn{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 5vw;
+    padding: 1vh 2vw;
+    margin: 4vh 10vw;
+    background-color: #252525;
+
+}
+.homeLearn h3{
+    grid-column: 1;
+    font-size: 0.45em;
+    color: #02b7cf;
+}
+.homeLearn div{
+    grid-column: 1;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.homeLearn #homeLearnLink{
+    font-size: 0.37em;
+    text-decoration: none;
+    color: #02b7cf;
+    align-self: flex-start;
+}
+.homeLearn p{
+    font-size: 0.4em;
+    color: #eeeeee;
+}
+.homeLearn img{
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    width: 30vw;
+    justify-self: center;
+    align-self: center;
+}
+
+@media screen and (max-width: 768px) {
+    .homeCont .homeDiv{
+        height: 65vh;
+        padding-top: 20vh;
+    }
+    .homeCont .homeAbout{
+        grid-template-columns: auto;
+        margin: 1vh 5vw;
+        padding: 4vh 2vw;
+    }
+    .homeAbout h3{
+        font-size: 0.5em;
+        grid-column: unset;
+    }
+    .homeAbout div{
+        grid-column: unset;
+    }
+    .homeAbout p{
+        font-size: 0.45em;
+    }
+    .homeAbout #homeAboutLink{
+        font-size: 0.45em;
+    }
+    .homeAbout img{
+        grid-column: unset;
+        grid-row: 2;
+        width: 83vw;  
+    }
+    .gettingStarted ul{
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+    .gettingStarted ul li{
+        width: 70vw;
+        font-size: 0.45em;
+    }
+    .gettingStarted ul img{
+        width: 69vw;
+    }
+    .homeCont .homeLearn{
+        grid-template-columns: auto;
+        margin: 4vh 5vw;
+        padding: 4vh 2vw;
+    }
+    .homeLearn h3{
+        font-size: 0.5em;
+        grid-column: unset;
+    }
+    .homeLearn div{
+        grid-column: unset;
+    }
+    .homeCont p{
+        font-size: 0.45em;
+    }
+    .homeLearn #homeLearnLink{
+        font-size: 0.45em;
+    }
+    .homeLearn img{
+        grid-column: unset;
+        grid-row: 2;
+        width: 83vw;
+    }
+
+}

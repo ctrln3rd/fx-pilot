@@ -1,0 +1,27 @@
+.adminLoginCont{
+    margin: 0;
+    padding: 0;
+    padding-top: 15vh;
+    font-size: calc(15px + ((4vh + 2vw) / 2));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.adminLoginCont h2{
+    font-size: 0.7em;
+}
+.adminLoginCont .adminLoginForm{
+    display: flex;
+    flex-direction: column;
+}
+.adminLoginForm input{
+    font-size: 0.4em;
+    margin: 2vh 0;
+    padding: 1vh 1vw;
+}
+.adminLoginForm input[type="submit"]{
+    background-color: #10d2ec;
+    border: none;
+    cursor: pointer;
+}

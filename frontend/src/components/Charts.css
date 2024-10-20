@@ -1,0 +1,47 @@
+.chartCont{
+    margin: 4vh 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.chartCont .activeDays{
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+.activeDays li button{
+    padding: 1vh 1.5vw;
+    border: none;
+    font-size: 0.3em;
+    cursor: pointer;
+    border-radius: 7px;
+}
+.chartCont .myChart{
+    font-size: 0.4em;
+    color: white;
+    width: 50vw;
+}
+.myChart .chart{
+    width: 100%;
+}
+.chart #myChartLine{
+    stroke: red;
+    stroke-width: 30px;
+}
+
+.chart #myXaxis,#myYaxis{
+    fill: #06a3e0;
+}
+
+@media screen and (max-width: 800px){
+    .activeDays li button{
+        padding: 1vh 2vw;
+        font-size: 0.4em;
+    }
+    .chartCont .myChart{
+        width: 90vw;
+    }
+}

@@ -1,0 +1,221 @@
+.topCont{
+    margin: 0;
+    padding: 0;
+    font-size: calc(15px + ((4vh + 2vw) / 2));
+}
+.topCont .myHeader{
+    z-index: 5;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom: #5c5c5c 1px dotted;
+    width: 100%;
+    background-color: #f1f1f1;
+}
+.myHeader #appTitle{
+    font-size: 0.7em;
+    margin-left: 5vw;
+}
+#appTitle *{
+    text-decoration: none;
+}
+#appTitle sub{
+    color: #04acb8;
+}
+.myHeader .authLinks{
+    display: flex;
+    flex-direction:  row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10vw;
+}
+.authLinks #authLink{
+    text-decoration: none;
+    color: #3d3d3d;
+    background-color: #0fdae9;
+    margin: 0 1vw;
+    font-size: 0.37em;
+    padding: 1vh 2vw;
+    border: none;
+    cursor: pointer;
+}
+.myHeader #menuBut{
+    width: 30px;
+    justify-self: end;
+    padding: 10px;
+}
+.myHeader .navBar{
+    margin-left: 5vw;
+}
+.navBar .navList{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.navList #navbarLink{
+    font-size: 0.375em;
+    text-decoration: none;
+    color: #3d3d3d;
+    padding: 0;
+    margin: 1vh 2.5vw;
+}
+
+/*dropdown container */
+.topCont .dropdownCont{
+    z-index: 4;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    padding-top: 20vh;
+    background-color: #e6e6e6;
+    display: flex;
+    flex-direction: column;
+}
+.dropdownCont img{
+    width: 30px;
+    justify-self: right;
+    align-self: flex-end;
+    padding: 20px;
+}
+.dropdownCont .navList{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    list-style: none;
+}
+.navList #dropdownLink{
+    color: #2b2b2b;
+    text-decoration: none;
+    font-size: 0.47em;
+    font-weight: bold;
+    margin: 2vh 0;
+}
+
+/*bottom cont*/
+.bottomCont{
+    z-index: 3;
+    margin: 0;
+    padding: 0;
+    margin-top: 10vh;
+    position: relative;
+    bottom: 0;
+    font-size: calc(15px + ((4vh + 2vw) / 2));
+    background-color: #2b2b2b;
+    border-top: #f1f1f1 1px dotted;
+}
+.bottomCont .bottomPayments{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.bottomPayments img{
+    width: 80px;
+    margin: 1vh 5vw;
+}
+.bottomCont .myFooter{
+    border-top: #f1f1f1 1px dotted;
+    margin: 0 5vw;
+}
+.myFooter .footerLinks{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.footerLinks li{
+    display: flex;
+    flex-direction: column;
+    font-size: 0.4em;
+    color: #f1f1f1;
+    font-weight: bold;
+    margin: 1vh 5vw;
+}
+.footerLinks #footerLink{
+    text-decoration: none;
+    color: #e6e6e6;
+    font-weight: lighter;
+   font-size: 0.9em;
+   background-color: transparent;
+   border: none;
+   margin: 2vh 0;
+   cursor: pointer;
+}
+#footerLink:hover{
+    color: #04acb8;
+}
+
+.myFooter #footerPolicy{
+    font-size: 0.34em;
+    margin: 2vh 5vw;
+    line-height: 1.7;
+    color: #e6e6e6;
+}
+.myFooter .bottomMost{
+    border-top: #f1f1f1 1px dotted;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.bottomMost .policyLinks{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+.policyLinks #policyLink{
+    color: #f1f1f1;
+    font-size: 0.34em;
+    margin: 1vh 0.5em;
+}
+.bottomMost #copywrite{
+    font-size: 0.34em;
+    margin: 1vh 10vw;
+    color: #e6e6e6;
+}
+
+@media screen and (max-width: 768px) {
+    .topCont .myHeader{
+        grid-template-columns: auto auto;
+    }
+    .myHeader .authLinks{
+        grid-column: 1 / span 2;
+        grid-row: 1;
+        margin: 2vh 0;
+    }
+    .authLinks #authLink{
+        font-size: 0.45em;
+    }
+    .bottomCont .bottomPayments{
+        padding: 0;
+    }
+    .bottomPayments img{
+        width: 40px;
+    }
+    .footerLinks li{
+        margin: 1vh 3vw;
+        font-size: 0.42em;
+    }
+    .myFooter .footerLinks{
+        padding: 0;
+    }
+    .policyLinks #policyLink{
+        font-size: 0.4em;
+
+    }.myFooter .bottomMost{
+        flex-direction: column;
+    }
+    .bottomMost .policyLinks{
+        padding: 0;
+    }
+}

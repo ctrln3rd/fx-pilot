@@ -1,0 +1,206 @@
+.loginCont{
+    margin: 0;
+    padding: 0;
+    padding-top: 15vh;
+    font-size: calc(15px + ((4vh + 2vw) / 2));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: #313131 1.5px dotted;
+}
+.loginCont h2{
+    text-align:  center;
+    margin: 1vh 0;
+    font-size: 0.5em;
+    color: #1b1b1b;
+}
+.loginCont #loginSignupCheck{
+    text-decoration: none;
+    color: #646464;
+    margin: 1vh 0;
+    font-size: 0.35em;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+#loginSignupCheck span{
+    color: #aa032d;
+}
+.loginCont .loginForm{
+    margin: 4vh 0;
+    justify-self: center;
+    margin-top: 7vh;
+    color: #313131;
+    display:  flex;
+    flex-direction: column;
+}
+.loginForm input{
+    width: 30vw;
+    padding: 1vh 1vw;
+    margin: 2vh 0;
+    font-size: 0.4em;
+}
+.loginForm p{
+    font-size: 0.4em;
+    margin: 3vh 0;
+    color: #04e0ce;
+    cursor: pointer;
+}
+.loginForm input[type="submit"]{
+    background-color: #04e0ce;
+    border: none;
+    margin: 2vh 0;
+    cursor: pointer;
+    justify-self: center;
+    align-self: center;
+}
+.loginCont .forgotPassword{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3vh;
+    padding: 10px;
+    border-radius: 10px;
+    border: #04e0ce 1px dotted;
+}
+.forgotPassword h3{
+    font-size: 0.6em;
+}
+.forgotPassword h3 span{
+    font-size: 0.7em;
+    color: #04e0ce;
+    cursor: pointer;
+}
+.forgotPassword input{
+    font-size: 0.4em;
+    width: 30vw;
+    border: none;
+    outline: none;
+    padding-bottom: 1vh;
+    border-bottom: #646464 1px solid;
+}
+.forgotPassword input[type="submit"]{
+    background-color: #04e0ce;
+    font-size: 0.32em;
+    margin: 0 1vw;
+    cursor: pointer;
+    border: none;
+    padding: 1vh 3vw;
+}
+
+
+/*signup style*/
+.signupCont{
+    margin: 0;
+    padding: 0;
+    padding-top: 15vh;
+    font-size: calc(15px + ((4vh + 2vw) / 2));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: #313131 1.5px dotted;
+}
+.signupCont h2{
+    font-size: 0.5em;
+    margin:  1vh 0;
+    text-align: center;
+}
+.signupCont h2 span{
+    font-weight: lighter;
+}
+
+.signupCont #signupLoginCheck{
+    text-decoration: none;
+    color: #646464;
+    margin: 2vh 0;
+    margin-left: 2vw;
+    font-size: 0.35em;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+#signupLoginCheck span{
+    color: #aa032d;
+}
+.signupCont .signupForm{
+    grid-column: 1 /span 2;
+    margin: 4vh 0;
+    justify-self: center;
+    color: #313131;
+    display:  flex;
+    flex-direction: column;
+}
+
+.signupForm input{
+    width: 30vw;
+    margin: 1.5vh 0;
+    font-size: 0.4em;
+    padding: 1vh 1vw;
+}
+.signupForm p{
+    font-size: 0.4em;
+    margin: 2.5vh 0;
+}
+.signupForm #signupError{
+    color: #aa032d;
+}
+.signupForm #signupStatus{
+    color: #04e0ce;
+}
+.signupForm input[type="submit"]{
+    background-color: #04e0ce;
+    border: none;
+    margin: 2vh 0;
+    cursor: pointer;
+    justify-self: center;
+    align-self: center;
+}
+
+.signupCont .confirm-email{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 10px;
+    border: #04e0ce 1px dotted;
+    border-radius: 10px;
+}
+.confirm-email h3{
+    font-size: 0.6em;
+}
+.confirm-email p{
+    font-size: 0.4em;
+}
+.confirm-email .confirmedtoprofile{
+    align-self: flex-end;
+    color: #04e0ce;
+    text-decoration: none;
+    font-size: 0.4em;
+}
+
+@media screen  and (max-width: 768px){
+    .loginCont{
+        padding-top: 20vh;
+    }
+    .signupCont{
+        padding-top: 20vh;
+    }
+    .signupCont #signupLoginCheck{
+        font-size: 0.45em;
+    }
+    .signupForm input{
+        width: 70vw;
+        font-size: 0.45em;
+    }
+    .loginCont #loginSignupCheck{
+        font-size: 0.45em;
+    }
+    .loginForm input{
+        width: 70vw;
+        font-size: 0.45em;
+    }
+    
+}

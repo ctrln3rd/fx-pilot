@@ -1,0 +1,295 @@
+.profileCont{
+    margin: 0;
+    padding: 0;
+    padding-top: 15vh;
+    font-size: calc(15px + ((4vh + 2vw) / 2));
+}
+
+.profileCont h3{
+    font-size: 0.6em;
+    text-align: center;
+}
+.profileCont h3 span{
+    font-weight: lighter;
+    color: #06a3e0;
+}
+.profileCont .accountManage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.accountManage #accountLink{
+    text-decoration: none;
+    width: 40vw;
+    margin: 2vh 0;
+    font-size: 0.36em;
+    background-color: #06a3e0;
+    padding: 2vh 0;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+.accountManage #accountLink:hover{
+    color: #e00635;
+}
+
+.profileCont .exchangeCont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.exchangeCont p{
+    font-size: 0.4em;
+    font-weight: bold;
+    text-align: center;
+}
+.exchangeCont p span{
+    color: #06a3e0;
+}
+.exchangeCont p :nth-child(2){
+    margin-left: 0.6vw;
+    padding: 0.5vh 1vw;
+}
+.exchangeCont #controlCharts{
+    padding: 2vh 3vw;
+    border: #06a3e0 2px solid;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 0.3em;
+}
+
+.profileCont .profileOut{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+}
+.profileOut button{
+    margin: 1vh 5vw;
+    font-size: 0.4em;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.profileOut button img{
+    width: 35px;
+}
+
+.depositCont{
+    font-size: calc(15px + ((4vh + 2vw) / 2));
+    margin: 0;
+    padding: 0;
+    padding-top: 15vh;
+    display: flex;
+    flex-direction:  column;
+    justify-content: center;
+    align-items: center;
+}
+
+.depositCont h2{
+    font-size: 0.6em;
+}
+.depositCont .depositMethods{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+.depositMethods img{
+    width: 80px;
+}
+.depositCont li{
+    font-size: 0.4em;
+    margin: 1vh 5vw;
+}
+.depositCont li p span{
+    font-weight: bold;
+}
+.depositCont .depositForm{
+    display: flex;
+    flex-direction: column;
+}
+.depositForm label{
+    font-size: 0.4em;
+    margin: 1vh 0;
+}
+.depositForm input,select,textarea{
+    font-size: 0.4em;
+    width: 40vw;
+    margin: 1.5vh 0;
+    padding: 1vh 1vw;
+}
+.depositForm input[type="submit"]{
+    background-color: #06a3e0;
+    border: none;
+    cursor: pointer;
+    padding: 2vh 5vw;
+}
+
+/*withdraw container*/
+.withdrawCont{
+    font-size: calc(15px + ((4vh + 2vw) / 2));
+    margin: 0;
+    padding: 0;
+    padding-top: 15vh;
+    display: flex;
+    flex-direction:  column;
+    justify-content: center;
+    align-items: center;
+}
+.withdrawCont h2{
+    font-size: 0.6em;
+}
+.withdrawCont .withdrawForm{
+    display: flex;
+    flex-direction: column;
+}
+.withdrawForm label{
+    font-size: 0.4em;
+    margin: 1vh 0;
+}
+.withdrawForm input,select,textarea{
+    font-size: 0.4em;
+    width: 40vw;
+    padding: 1vh 1vw;
+    margin: 1.5vh 0;
+}
+.withdrawForm input[type="submit"]{
+    background-color: #06a3e0;
+    border: none;
+    cursor: pointer;
+    padding: 2vh 5vw;
+}
+
+/*Transactions cont*/
+.transactionsCont{
+    font-size: calc(15px + ((4vh + 2vw) / 2));
+    margin: 0;
+    padding: 0;
+    padding-top: 15vh;
+    display: flex;
+    flex-direction:  column;
+    justify-content: center;
+    align-items: center;
+}
+.transactionsCont h2{
+    font-size: 0.6em;
+}
+.transactionsCont div h4{
+    font-size: 0.4em;
+    color: #e00635;
+}
+.transactionsCont .mySuccessCont{
+    margin: 5vh 0;
+    background-color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.mySuccessCont .mySuccessList{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+.mySuccessList li{
+    margin: 1vh 2vw;
+    padding: 2vh 2vw;
+    font-size: 0.4em;
+    border-bottom: #333333 1px dotted;
+}
+.mySuccessList li strong{
+    margin: 0 4vw;
+}
+.mySuccessList button{
+    background-color: #06a3e0;
+    border: none;
+    padding: 1vh 4vw;
+    margin: 1vh 0;
+    cursor: pointer;
+}
+
+.transactionsCont .myPendingCont{
+    margin: 5vh 0;
+    background-color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.myPendingCont .myPendingList{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+.myPendingList li{
+    margin: 1vh 2vw;
+    padding: 2vh 2vw;
+    font-size: 0.4em;
+    border-bottom: #333333 1px dotted;
+}
+.myPendingList li strong{
+    margin: 0 4vw;
+}
+.myPendingList button{
+    background-color: #06a3e0;
+    border: none;
+    padding: 1vh 4vw;
+    margin: 1vh 0;
+    cursor: pointer;
+}
+
+@media screen  and (max-width: 768px) {
+    /*deposit account*/
+    .depositCont .depositMethods{
+        flex-direction: column;
+    }
+    .depositMethods img{
+        width: 50px;
+    }
+    .depositMethods li{
+        font-size: 0.5em;
+    }
+    .depositMethods li h4{
+        margin: 0;
+        padding: 0;
+    }
+    .depositForm label{
+        font-size: 0.475em;
+    }
+    .depositForm input,select,textarea{
+        width: 70vw;
+        font-size: 0.48em;
+    }
+    .withdrawForm label{
+        font-size: 0.47em;
+    }
+    .withdrawForm input,select,textarea{
+        font-size: 0.48em;
+        width: 70vw;
+    }
+    .accountManage #accountLink{
+        font-size: 0.45em;
+        width: 65vw;
+    }
+    .mySuccessList li{
+        font-size: 0.42em;
+        padding: 1vh 1vw;
+    }
+    .myPendingList li{
+        font-size: 0.42em;
+        padding: 1vh 1vw;
+    }
+}
